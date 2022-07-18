@@ -1,6 +1,6 @@
 # Self-Driving Cars - Udacity
 
-# Chapter 1 - Computer Vision
+# Chapter 1 | Computer Vision
 ## The Machine Learning Workflow 
 ### Ex1 | Choosing metrics
 
