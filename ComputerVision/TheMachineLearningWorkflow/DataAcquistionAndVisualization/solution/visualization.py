@@ -38,10 +38,10 @@ def viz(ground_truth):
         classes = gtdic[filename]['classes']
         for cl, bb in zip(classes, bboxes):
             y1, x1, y2, x2 = bb
-            rec = Rectangle((x1, y1), x2- x1, y2-y1, facecolor='none', 
+            rec = Rectangle((x1, y1), x2 - x1, y2 - y1, facecolor='none',
                             edgecolor=colormap[cl])
             ax[x, y].add_patch(rec)
-        ax[x ,y].axis('off')
+        ax[x, y].axis('off')
     plt.tight_layout()
     plt.show()
 
