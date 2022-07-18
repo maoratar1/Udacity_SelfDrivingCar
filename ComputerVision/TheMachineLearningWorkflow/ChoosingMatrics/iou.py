@@ -1,7 +1,5 @@
 import numpy as np
 
-from ComputerVision.TheMachineLearningWorkflow.ChoosingMatrics.utils import get_data, check_results
-
 
 def calculate_ious(gt_bboxes, pred_bboxes):
     """
@@ -47,16 +45,3 @@ def calculate_iou(gt_bbox, pred_bbox):
     iou = intrsct_space / union_space 
     
     return iou
-
-
-if __name__ == "__main__": 
-    ground_truth, predictions = get_data()
-    # get bboxes array
-    filename = 'segment-1231623110026745648_480_000_500_000_with_camera_labels_38.png'
-    gt_bboxes = [g['boxes'] for g in ground_truth if g['filename'] == filename][0]
-    gt_bboxes = np.array(gt_bboxes)
-    pred_bboxes = [p['boxes'] for p in predictions if p['filename'] == filename][0]
-    pred_boxes = np.array(pred_bboxes)
-    
-    ious = calculate_ious(gt_bboxes, pred_boxes)
-    check_results(ious)
