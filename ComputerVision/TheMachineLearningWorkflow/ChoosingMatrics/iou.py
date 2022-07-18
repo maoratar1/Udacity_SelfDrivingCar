@@ -1,6 +1,6 @@
 import numpy as np
 
-from utils import get_data, check_results
+from ComputerVision.TheMachineLearningWorkflow.ChoosingMatrics.utils import get_data, check_results
 
 
 def calculate_ious(gt_bboxes, pred_bboxes):
@@ -42,7 +42,7 @@ def calculate_iou(gt_bbox, pred_bbox):
     pred_bbox_space = (x2 - x1) * (y2 - y1)
     gt_bbox_space = (x4 - x3) * (y4 - y3)
     
-    union_space = pred_bbox_space * gt_bbox_space - intrsct_space
+    union_space = pred_bbox_space + gt_bbox_space - intrsct_space
     
     iou = intrsct_space / union_space 
     
@@ -60,6 +60,3 @@ if __name__ == "__main__":
     
     ious = calculate_ious(gt_bboxes, pred_boxes)
     check_results(ious)
-    A = np.array([1, 1, 4, 4])
-    B = np.array([3, 3, 6, 6])
-    print(calculate_iou(A, B))
