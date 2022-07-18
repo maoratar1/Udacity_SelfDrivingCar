@@ -4,4 +4,4 @@ Current Files:
 
 Chapter 1 - Computer Vision 
 - The Machine Learning Workflow 
-  - Calculate IOU 
+  - Calculate IOU and Precision
