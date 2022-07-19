@@ -2,8 +2,6 @@ import sys
 import numpy as np
 import glob
 import cv2
-from PIL import Image
-import PIL
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
