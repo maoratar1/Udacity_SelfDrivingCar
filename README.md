@@ -54,3 +54,18 @@ The bounding boxes are using the `[x1, y1, x2, y2]` format. Images (png files) a
 The `utils.py` file contains an help function `get_data` that you can import to load the ground truth and the predictions. You will only need the ground truth for 
 this exercise though. 
 
+### Exercise 3 - Create tf records
+
+The goal of this exercise is to make you familiar with the tf record format. In particular, 
+your job is to convert the data from the Waymo Open Dataset into the tf record format used by the Tensorflow Object Detection API.
+
+### Exercise 4 | Correcting For Distortion
+
+In this exercise we fix an image distortion. First we calibrate the camera
+using the chess board method, and then we apply the distortion. 
+
+There are two main steps to this process: use chessboard images to obtain image points and object points, 
+and then use the OpenCV functions `cv2.calibrateCamera()` and `cv2.undistort()` to compute the calibration and undistortion.  
+
+Results:
+![Distorted and Undistorted Images](ComputerVision/TheMachineLearningWorkflow/Ex4_CameraCalibration/orig-and-undist.png)
