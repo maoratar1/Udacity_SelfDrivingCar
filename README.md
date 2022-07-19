@@ -59,7 +59,8 @@ this exercise though.
 The goal of this exercise is to make you familiar with the tf record format. In particular, 
 your job is to convert the data from the Waymo Open Dataset into the tf record format used by the Tensorflow Object Detection API.
 
-### Exercise 4 | Correcting For Distortion
+## Sensor and Camera calibration
+### Exercise 1 | Correcting For Distortion
 
 In this exercise we fix an image distortion. First we calibrate the camera
 using the chess board method, and then we apply the distortion. 
