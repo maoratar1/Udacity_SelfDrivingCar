@@ -61,7 +61,7 @@ Implement the following geometric transformations
 from scratch: horizontal flipping, resizing and random cropping in `augmentations.py`. 
 The implementations should not only affect the images but also the associated bounding boxes. 
 
-![]( ComputerVision/SensorAndCameraCalibration/Ex3_GeometricTrans/example.png 
+![]( ComputerVision/2_SensorAndCameraCalibration/Ex3_GeometricTrans/example.png 
 )
 
 The `hflip` function takes the image and bounding boxes as input and performs a 
