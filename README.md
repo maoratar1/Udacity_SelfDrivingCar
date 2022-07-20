@@ -80,3 +80,15 @@ Because we are cropping randomly, we may only keep a tiny portion of an object, 
 case the annotations will not be useful anymore. For example, in the image below, we may not want to keep the annotation of the cat because most of the animal's body is not visible.
 
 ![]( ComputerVision/SensorAndCameraCalibration/Ex3_GeometricTrans/cat_cropped.png)
+
+## From Linear Regression To FeedForward Neural Network
+### Exercise 1 - Logistic regression
+
+Implementing:
+* `softmax`: compute the softmax of a vector. This function takes as input a tensor and outputs a discrete probability distribution. 
+
+* `cross_entropy`: calculate the cross entropy loss given a vector of predictions (after softmax) and a vector of ground truth (one-hot vector).
+
+* `model`: takes a batch of images (stack of images along the first dimensions) and feeds it through the logistic regression model
+
+* `accuracy`: given a vector of predictions and a vector of ground truth, calculates the accuracy.

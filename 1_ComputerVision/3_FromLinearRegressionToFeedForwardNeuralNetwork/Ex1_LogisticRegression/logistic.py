@@ -1,4 +1,5 @@
 import tensorflow as tf
+from solution import utils
 
 
 def softmax(logits):
@@ -9,8 +10,9 @@ def softmax(logits):
     returns:
     - soft_logits [tensor]: softmax of logits
     """
-    # IMPLEMENT THIS FUNCTION
-    return soft_logits
+    exp = tf.exp(logits)
+    denom = tf.math.reduce_sum(exp, 1, keepdims=True)
+    return exp / denom
 
 
 def cross_entropy(scaled_logits, one_hot):
@@ -22,8 +24,8 @@ def cross_entropy(scaled_logits, one_hot):
     returns:
     - loss [tensor]: cross entropy 
     """
-    # IMPLEMENT THIS FUNCTION
-    return nll
+    masked_logits = tf.boolean_mask(scaled_logits, one_hot)
+    return -tf.math.log(masked_logits)
 
 
 def model(X, W, b):
@@ -36,8 +38,8 @@ def model(X, W, b):
     returns:
     - output [tensor]
     """
-    # IMPLEMENT THIS FUNCTION
-    return 
+    flatten_X = tf.reshape(X, (-1, W.shape[0]))
+    return softmax(tf.matmul(flatten_X, W) + b)
 
 
 def accuracy(y_hat, Y):
@@ -49,5 +51,23 @@ def accuracy(y_hat, Y):
     returns:
     - acc [tensor]: accuracy
     """
-    # IMPLEMENT THIS FUNCTION
+    # calculate argmax
+    argmax = tf.cast(tf.argmax(y_hat, axis=1), Y.dtype)
+
+    # calculate acc
+    acc = tf.math.reduce_sum(tf.cast(argmax == Y, tf.int32)) / Y.shape[0]
     return acc
+
+
+if __name__ == '__main__':
+    # checking the softmax implementation
+    utils.check_softmax(softmax)
+
+    # checking the NLL implementation
+    utils.check_ce(cross_entropy)
+
+    # check the model implementation
+    utils.check_model(model)
+
+    # check the accuracy implementation
+    utils.check_acc(accuracy)
