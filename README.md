@@ -119,4 +119,8 @@ The neural network you create should have less than 4 layers, including the outp
 
 Implementation of the Non-Max Suppression algorithm.
 
+### Exercise 2 - Mean Average Precision
+
+Implementation of the Mean Average Precision (mAP) metric.
+
 
