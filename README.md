@@ -1,7 +1,7 @@
 # Self-Driving Cars - Udacity
 
 # Chapter 1 | Computer Vision
-## The Machine Learning Workflow 
+## 1 | The Machine Learning Workflow 
 ### Ex1 | Choosing metrics
 
 #### Part 1 - Calculate IOU
@@ -27,7 +27,7 @@ with each bounding box. You need to display all the data in a single figure.
 
 Converting the data from the Waymo Open Dataset into the tf record format used by the Tensorflow Object Detection API.
 
-## Sensor and Camera calibration
+## 2 | Sensor and Camera calibration
 ### Exercise 1 | Correcting For Distortion
 
 In this exercise we fix an image distortion. First we calibrate the camera
@@ -81,7 +81,7 @@ case the annotations will not be useful anymore. For example, in the image below
 
 ![](1_ComputerVision/2_SensorAndCameraCalibration/Ex3_GeometricTrans/cat_cropped.png)
 
-## From Linear Regression To FeedForward Neural Network
+## 3 | From Linear Regression To FeedForward Neural Network
 ### Exercise 1 - Logistic regression
 
 Implementing:
@@ -110,3 +110,13 @@ In this exercise, we learn how to leverage the [Keras API](https://www.tensorflo
 to create a small neural network.
 
 The neural network you create should have less than 4 layers, including the output layer. This last layer should not be activated. Take the time to experiment with different architecture (number of layers, number of neurons) and see how it impacts the results.
+
+## 4 | Image Classification With CNNs
+
+## 5 | Object Detection
+
+### Exercise 1 - NMS
+
+Implementation of the Non-Max Suppression algorithm.
+
+
