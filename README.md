@@ -102,3 +102,11 @@ A training loop goes through element of the training dataset and uses it to upda
 A validation loop goes through each element of the validation dataset and uses it to calculate
 the metrics (eg, accuracy). We call **epoch** an iteration of one training loop and one validation loop.
 
+
+### Exercise 3 - Keras
+
+
+In this exercise, we learn how to leverage the [Keras API](https://www.tensorflow.org/api_docs/python/tf/keras)
+to create a small neural network.
+
+The neural network you create should have less than 4 layers, including the output layer. This last layer should not be activated. Take the time to experiment with different architecture (number of layers, number of neurons) and see how it impacts the results.
