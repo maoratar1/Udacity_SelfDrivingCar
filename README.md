@@ -54,4 +54,29 @@ In the example below, we can see (from left to right), the original RGB image, t
 
 ### Pixel Level Transformations
 
-### Geometric transformations
+### Exercise 3 - Geometric transformations
+
+
+Implement the following geometric transformations
+from scratch: horizontal flipping, resizing and random cropping in `augmentations.py`. 
+The implementations should not only affect the images but also the associated bounding boxes. 
+
+![]( ComputerVision/SensorAndCameraCalibration/Ex3_GeometricTrans/example.png 
+)
+
+The `hflip` function takes the image and bounding boxes as input and performs a 
+horizontal flip. For example, an object initially on the left of the image will 
+end up on the right.
+
+The `resize` function takes the image, bounding boxes and target size as input. 
+It scales up or down images and bounding boxes.
+
+The `random_crop` function takes a few additional inputs. It also needs the classes, 
+the crop size and the minimum area. Let's explain these parameters:
+* `crop_size` is the size of the crop. It should be smaller than the dimensions of the input image.
+* `min_area` is the minimum area of a bounding boxes to be considered as an object after cropping.
+
+Because we are cropping randomly, we may only keep a tiny portion of an object, in which
+case the annotations will not be useful anymore. For example, in the image below, we may not want to keep the annotation of the cat because most of the animal's body is not visible.
+
+![]( ComputerVision/SensorAndCameraCalibration/Ex3_GeometricTrans/cat_cropped.png)
