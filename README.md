@@ -19,7 +19,7 @@ Implementing a function to visualize the ground truth boxes
 on a set of images in `visualization.py`. Displaying color coded bounding boxes using the class id associated
 with each bounding box. You need to display all the data in a single figure.
 
-![](ComputerVision/TheMachineLearningWorkflow/Ex2_DataAcquistionAndVisualization/example.png 
+![](1_ComputerVision/1_TheMachineLearningWorkflow/Ex2_DataAcquistionAndVisualization/example.png 
 )
 
 
@@ -37,7 +37,7 @@ There are two main steps to this process: use chessboard images to obtain image 
 and then use the OpenCV functions `cv2.calibrateCamera()` and `cv2.undistort()` to compute the calibration and undistortion.  
 
 Results:
-![Distorted and Undistorted Images](ComputerVision/TheMachineLearningWorkflow/Ex4_CameraCalibration/orig-and-undist.png)
+![Distorted and Undistorted Images](1_ComputerVision/1_TheMachineLearningWorkflow/Ex4_CameraCalibration/orig-and-undist.png)
 
 ### Exercise 2 | Image manipulation
 
@@ -50,7 +50,7 @@ And creating a masked version of the RGB image.
 
 In the example below, we can see (from left to right), the original RGB image, the binary mask and the masked RGB image. In this example, we used a RGB color threshold of `(128, 128, 128)` and isolated all the pixels with a RGB value higher than this threshold.
 
-![](ComputerVision/SensorAndCameraCalibration/Ex2_ImageManipulation/example.png)
+![](1_ComputerVision/2_SensorAndCameraCalibration/Ex2_ImageManipulation/example.png)
 
 ### Pixel Level Transformations
 
@@ -61,7 +61,7 @@ Implement the following geometric transformations
 from scratch: horizontal flipping, resizing and random cropping in `augmentations.py`. 
 The implementations should not only affect the images but also the associated bounding boxes. 
 
-![]( ComputerVision/2_SensorAndCameraCalibration/Ex3_GeometricTrans/example.png 
+![](1_ComputerVision/2_SensorAndCameraCalibration/Ex3_GeometricTrans/example.png 
 )
 
 The `hflip` function takes the image and bounding boxes as input and performs a 
@@ -79,7 +79,7 @@ the crop size and the minimum area. Let's explain these parameters:
 Because we are cropping randomly, we may only keep a tiny portion of an object, in which
 case the annotations will not be useful anymore. For example, in the image below, we may not want to keep the annotation of the cat because most of the animal's body is not visible.
 
-![]( ComputerVision/SensorAndCameraCalibration/Ex3_GeometricTrans/cat_cropped.png)
+![](1_ComputerVision/2_SensorAndCameraCalibration/Ex3_GeometricTrans/cat_cropped.png)
 
 ## From Linear Regression To FeedForward Neural Network
 ### Exercise 1 - Logistic regression
@@ -92,3 +92,13 @@ Implementing:
 * `model`: takes a batch of images (stack of images along the first dimensions) and feeds it through the logistic regression model
 
 * `accuracy`: given a vector of predictions and a vector of ground truth, calculates the accuracy.
+
+### Exercise 2 - Custom training loop
+
+Implement your  training and validation loops from scratch to train
+the logistic model you implemented. To do so, you will also have to create an optimizer.
+
+A training loop goes through element of the training dataset and uses it to update the model's weights.
+A validation loop goes through each element of the validation dataset and uses it to calculate
+the metrics (eg, accuracy). We call **epoch** an iteration of one training loop and one validation loop.
+
