@@ -121,6 +121,10 @@ Implementation of  a simplified version of the max pooling layer.
 
 Implementation of a CNN
 
+### Exercise 3 - Augmentation
+experiment with the [Albumentations](https://albumentations.ai/docs/) library
+to perform different data augmentations. 
+
 ## 5 | Object Detection
 
 ### Exercise 1 - NMS
