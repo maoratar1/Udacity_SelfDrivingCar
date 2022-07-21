@@ -123,4 +123,8 @@ Implementation of the Non-Max Suppression algorithm.
 
 Implementation of the Mean Average Precision (mAP) metric.
 
+### Exercise 3 - Learning rate annealing
+
+Implementation of two different learning rate annealing (decay)
+strategies: step wise annealing and exponential annealing. 
 
