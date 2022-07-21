@@ -113,6 +113,14 @@ The neural network you create should have less than 4 layers, including the outp
 
 ## 4 | Image Classification With CNNs
 
+### Exercise 1 - Pooling
+
+Implementation of  a simplified version of the max pooling layer.
+
+### Exercise 2 - CNN
+
+Implementation of a CNN
+
 ## 5 | Object Detection
 
 ### Exercise 1 - NMS
