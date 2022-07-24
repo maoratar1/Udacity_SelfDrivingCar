@@ -50,7 +50,6 @@ def vis_intensity_channel(frame, lidar_name):
     cv2.waitKey(0)
 
 
-
 # Exercise C1-5-2 : Compute pitch angle resolution
 def print_pitch_resolution(frame, lidar_name):
 
